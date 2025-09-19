@@ -341,8 +341,8 @@ def calculate_output_data(config: ValidatorConfig):
     measurement = measurement_from_fields(
         "validators_info",
         calculate_influx_fields(data),
-        tags,
         config,
+        tags,
         legacy_tags
     )
     measurement.update({"cpu_model": data['cpu_model']})
